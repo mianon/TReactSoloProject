@@ -48,11 +48,25 @@ NAVBAR ↓
 */
 
 nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Keeps the navbar on top of other content */
+  background-color: #fff; /* Ensure it has a background color so text doesn't bleed through */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.nav__container {
+  max-width: 1200px; /* Keeps your content neatly contained */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 0 24px; /* Prevents text from smashing against screen edges on mobile */
+}
+
+.nav__row {
   display: flex;
-  padding-top: 32px;
   justify-content: space-between;
   align-items: center;
-  margin: 0 auto;
+  padding: 8px 0;
 }
 
 .nav__logo--img {
@@ -75,10 +89,24 @@ nav {
   padding-bottom: 4px;
 }
 
+.nav__links {
+  display: flex;
+  list-style: none; /* Removes bullets */
+  gap: 20px; /* Spaces links evenly */
+  padding: 0; /* Removes default browser indentation */
+  margin: 0; /* Removes default browser spacing */
+}
+
+.nav__links a {
+  text-decoration: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
 .nav__link {
   display: flex;
-  list-style-type: none;
-  text-decoration: none;
 }
 
 .btn__menu {
